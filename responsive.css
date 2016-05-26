@@ -1,0 +1,157 @@
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header__menu {
+  display: none;
+}
+
+.hero, .top-news, .scores, .weather, .recent-news {
+  order: 10;
+}
+@media screen and (max-width: 461px) {
+  body {
+    font-size:14px;
+  }
+  .scores__location {
+    display:none;
+  }
+  
+}
+@media screen and (max-width: 520px) {
+  .snippet__thumbnail {
+    display:none;
+  }
+  
+}
+@media screen and (min-width: 520px) {
+  .snippet__thumbnail {
+    display:block;
+    }
+  .snippet__thumbnail {
+  width: 30%;
+  float: left;
+  margin-right: 1em;
+  margin-bottom:1em;
+  }
+  
+}
+@media screen and (max-width: 640px) {
+  .header__title {
+    font-size:2.3em;
+  }
+  .header__logo {
+  height: 36px;
+  }
+  .nav {
+    z-index: 10;
+    background-color: #fff;
+    width: 200px;
+    right: 0;
+    position: absolute;
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(200px, 0);
+    transform: translate(200px, 0);
+    /* Optionally, we animate the drawer. */
+    transition: transform 0.3s ease;
+  }
+  .nav.open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  .nav__item {
+    display: list-item;
+    border-bottom: 1px solid #E0E0E0;
+    width: 100%;
+    text-align: left;
+  }
+  .header__menu {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    padding: 1em;
+  }
+  .header__menu svg {
+    width: 32px;
+    fill: #E0E0E0;
+  }
+}
+
+ @media screen and (min-width: 700px) {
+  .hero {
+  width: 100%;
+   }
+
+  .top-news {
+  width: 35%;
+   }
+  .weather{
+  width: 100%;
+  }
+  .recent-news {
+  width: 100%;
+  }
+  .scores {
+  width: 60%;
+  } 
+  .date-width-fixed {
+  width:20px;
+  }
+   .snippet__thumbnail {
+  width: 40%;
+  float: right;
+  margin-right: 1em;
+  margin-bottom:1em;
+  }
+  .description p {
+    font-size:18px;
+  }
+
+ 
+}
+
+
+  @media screen and (min-width: 830px) {
+  .hero {
+  width: 55%;
+  order:1;
+   }
+  .description p {
+    font-size:16px;
+  }
+
+  .weather{
+  width: 40%;
+  order:5;
+  }
+  .top-news {
+  width: 45%;
+  order:2;
+   }
+  .recent-news {
+  width: 100%;
+  order:3;
+  }
+  .scores {
+  width: 60%;
+  order:4;
+  } 
+  .scores__table {
+    line-height: 1em;
+  }
+  .date-width-fixed {
+  width:120px;
+  }
+
+}
+  @media screen and (min-width: 900px) {
+  main {
+    width:900px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  }
+
+
+
